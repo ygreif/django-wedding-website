@@ -3,3 +3,4 @@ Fabric==1.10.2
 #psycopg2==2.7.4
 psycopg2-binary
 gunicorn
+django-heroku
