@@ -1,6 +1,11 @@
 {% extends 'guests/email_templates/email_base.html' %}
 {% load static %}
 {% block main_image %}
+<center style="font-size:36px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};">Save the Date</center>
+  <br>
+ <center style="font-size:32px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};">{{ date }}</center>                 
+
+<br><br>
     <a href="{{ site_url }}"
        {% if email_mode %}target="_blank"{% endif %}>
     {% with "save-the-date/images/"|add:main_image as main_static_url %}
@@ -12,30 +17,29 @@
     {% endwith %}
     </a>
 {% endblock %}
-{% block main_copy %}
+    {% block main_copy %}
     <table border="0" width="100%" cellpadding="0" cellspacing="0">
         <tbody>
         <tr>
             <td style="font-size: 35px; font-family: Palatino, serif; color: {{ font_color }}; padding-top: 30px; font-weight:bolder;"
                 class="padding-copy"
                 align="center">
-                {{ date }}
+We are getting married!
             </td>
         </tr>
         <tr>
-            <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
+            <td style="padding: 20px 0 0 0; font-size: 22px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
                 class="padding-copy"
                 align="center">
-                {{ couple }}<br>
-                {{ location }}<br>
+              {{ couple }}<br><br>
+	      Saratoga Springs <br>
+              {{ location }}<br><br>
+	          		Invitation to follow
+		<br>
             </td>
         </tr>
         </tbody>
     </table>
 {% endblock %}
-{% block footer_content %}
-    Can't make it? Let us know at <a class="moz-txt-link-abbreviated" href="mailto:{{ rsvp_address }}">{{ rsvp_address }}</a>.
-    {% if email_mode %}
-        <p><a href="{{ site_url }}">{{ site_url }}</a></p>
-    {% endif %}
+    {% block footer_content %}
 {% endblock %}
