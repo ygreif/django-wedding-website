@@ -4,8 +4,12 @@
 <center style="font-size:36px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};">Save the Date</center>
   <br>
  <center style="font-size:32px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};">{{ date }}</center>                 
-
+ <br>
+ <center style="font-size:28px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};">(yes that is insanely soon)</center>                 
+ <br><br>
+  <center style="font-size:20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};">!!!</center>                 
 <br><br>
+
     <a href="{{ site_url }}"
        {% if email_mode %}target="_blank"{% endif %}>
     {% with "save-the-date/images/"|add:main_image as main_static_url %}
